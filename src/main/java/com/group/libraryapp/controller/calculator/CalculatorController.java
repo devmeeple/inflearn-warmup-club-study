@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.group.libraryapp.dto.request.CalculatorAddRequest;
-import com.group.libraryapp.dto.request.CalculatorMultiplyRequest;
+import com.group.libraryapp.dto.calculator.CalculatorAddRequest;
+import com.group.libraryapp.dto.calculator.CalculatorMultiplyRequest;
 
 @RestController
 public class CalculatorController {
