@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.group.libraryapp.domain.user.User;
 import com.group.libraryapp.dto.user.request.UserCreateRequest;
-import com.group.libraryapp.dto.user.request.response.UserResponse;
+import com.group.libraryapp.dto.user.response.UserResponse;
 
 @RestController
 public class UserController {
