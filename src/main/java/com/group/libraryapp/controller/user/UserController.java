@@ -2,7 +2,6 @@ package com.group.libraryapp.controller.user;
 
 import java.util.List;
 
-import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -22,8 +21,8 @@ public class UserController {
 	// TODO: 2024.04.30 13. 데이터베이스 사용
 	private final UserService userService;
 
-	public UserController(JdbcTemplate jdbcTemplate) {
-		this.userService = new UserService(jdbcTemplate);
+	public UserController(UserService userService) {
+		this.userService = userService;
 	}
 
 	@PostMapping("/user")

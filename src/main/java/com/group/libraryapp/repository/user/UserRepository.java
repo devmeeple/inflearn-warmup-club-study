@@ -3,12 +3,14 @@ package com.group.libraryapp.repository.user;
 import java.util.List;
 
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
 
 import com.group.libraryapp.dto.user.response.UserResponse;
 
 /**
  * SQL을 사용해 실제 데이터베이스와 통신한다
  */
+@Repository
 public class UserRepository {
 
 	private final JdbcTemplate jdbcTemplate;

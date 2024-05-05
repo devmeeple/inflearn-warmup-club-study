@@ -2,7 +2,6 @@ package com.group.libraryapp.service.user;
 
 import java.util.List;
 
-import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 
 import com.group.libraryapp.dto.user.request.UserCreateRequest;
@@ -18,8 +17,8 @@ public class UserService {
 
 	private final UserRepository userRepository;
 
-	public UserService(JdbcTemplate jdbcTemplate) {
-		userRepository = new UserRepository(jdbcTemplate);
+	public UserService(UserRepository userRepository) {
+		this.userRepository = userRepository;
 	}
 
 	public void saveUser(UserCreateRequest request) {
