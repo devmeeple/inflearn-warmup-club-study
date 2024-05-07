@@ -1,12 +1,25 @@
 package com.group.libraryapp.domain.user;
 
-/**
- * 데이터베이스 사용 전 임시 ArrayList 저장소
- */
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class User {
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id = null;
+
+	@Column(nullable = false, length = 20)
 	private String name;
+
 	private Integer age;
+
+	protected User() {
+	}
 
 	public User(String name, Integer age) {
 		if (name == null || name.isBlank()) {

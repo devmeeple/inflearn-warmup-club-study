@@ -63,3 +63,17 @@ SQL을 직접 사용했을 때의 문제점과 JPA는 무엇인가
 - 영속성(Persistence)은 영구적인 속성
 - 규칙(Interface)을 구현하기 위해 Hibernate(구현체)를 사용
 - Hibernate는 내부적으로 JDBC를 사용함
+
+## 24. 유저 테이블에 대응되는 Entity Class 만들기
+
+- Entity는 관리되어야 할 데이터를 의미함
+- 기존 클래스를 엔티티로 선언하기 위해서는 `@Entity`를 사용
+- id를 기본키로 만들어 주기 위해서는 `@Id`를 사용
+- `@GeneratedValue` 해서 기본키 생성전략을 제공해야 함
+- JPA를 사용하기 위해서는 기본 생성자가 제공되어야 함 이때 `protected`로 선언
+- `@Column`은 테이블과 매칭, 다양한 옵션을 선언할 수 있음. nullable, length, name...
+- JPA를 사용하기 위해서는 설정에 추가해야 함
+- `ddl-auto`: 서버가 시작될 때 테이블을 어떻게 처리할 것인지를 정함
+- `hibernate.show_sql`: 데이터베이스에 날리는 SQL을 보여줌
+- `hibernate.format_sql`: 포맷팅 해서 보기 좋게 보여줌
+- `hibernate.dialect`: SQL 방언을 JPA가 수정해 줌
