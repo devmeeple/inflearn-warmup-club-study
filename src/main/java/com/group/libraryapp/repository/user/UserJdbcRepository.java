@@ -11,11 +11,11 @@ import com.group.libraryapp.dto.user.response.UserResponse;
  * SQL을 사용해 실제 데이터베이스와 통신한다
  */
 @Repository
-public class UserRepository {
+public class UserJdbcRepository {
 
 	private final JdbcTemplate jdbcTemplate;
 
-	public UserRepository(JdbcTemplate jdbcTemplate) {
+	public UserJdbcRepository(JdbcTemplate jdbcTemplate) {
 		this.jdbcTemplate = jdbcTemplate;
 	}
 

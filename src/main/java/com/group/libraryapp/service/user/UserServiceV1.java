@@ -7,43 +7,43 @@ import org.springframework.stereotype.Service;
 import com.group.libraryapp.dto.user.request.UserCreateRequest;
 import com.group.libraryapp.dto.user.request.UserUpdateRequest;
 import com.group.libraryapp.dto.user.response.UserResponse;
-import com.group.libraryapp.repository.user.UserRepository;
+import com.group.libraryapp.repository.user.UserJdbcRepository;
 
 /**
  * 유저가 있는지, 없는지를 확인하고 예외처리를 한다
  */
 @Service
-public class UserService {
+public class UserServiceV1 {
 
-	private final UserRepository userRepository;
+	private final UserJdbcRepository userJdbcRepository;
 
-	public UserService(UserRepository userRepository) {
-		this.userRepository = userRepository;
+	public UserServiceV1(UserJdbcRepository userJdbcRepository) {
+		this.userJdbcRepository = userJdbcRepository;
 	}
 
 	public void saveUser(UserCreateRequest request) {
-		userRepository.saverUser(request.getName(), request.getAge());
+		userJdbcRepository.saverUser(request.getName(), request.getAge());
 	}
 
 	public List<UserResponse> getUsers() {
-		return userRepository.getUsers();
+		return userJdbcRepository.getUsers();
 	}
 
 	// TODO: 2024.05.01 존재하지 않는 유저를 업데이트, 삭제 요청할 때 어떻게 예외처리할까?
 	public void updateUser(UserUpdateRequest request) {
-		if (userRepository.isUserNotExist(request.getId())) {
+		if (userJdbcRepository.isUserNotExist(request.getId())) {
 			throw new IllegalArgumentException();
 		}
 
-		userRepository.updateUserName(request.getName(), request.getId());
+		userJdbcRepository.updateUserName(request.getName(), request.getId());
 
 	}
 
 	public void deleteUser(String name) {
-		if (userRepository.isUserNotExist(name)) {
+		if (userJdbcRepository.isUserNotExist(name)) {
 			throw new IllegalArgumentException();
 		}
 
-		userRepository.deleteUser(name);
+		userJdbcRepository.deleteUser(name);
 	}
 }

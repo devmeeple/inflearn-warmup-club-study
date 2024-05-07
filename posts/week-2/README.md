@@ -77,3 +77,11 @@ SQL을 직접 사용했을 때의 문제점과 JPA는 무엇인가
 - `hibernate.show_sql`: 데이터베이스에 날리는 SQL을 보여줌
 - `hibernate.format_sql`: 포맷팅 해서 보기 좋게 보여줌
 - `hibernate.dialect`: SQL 방언을 JPA가 수정해 줌
+
+## 25. Spring Data JPA를 이용해 자동으로 쿼리 날리기
+
+- JPA를 편리하게 사용할 수 있도록 Spring에서는 Spring Data JPA를 지원함
+- Spring Data JPA -> JPA -> Hibernate -> JDBC
+- save: 객체를 저장하거나 업데이트
+- findAll: 일치하는 모든 데이터 조회
+- findById: id를 기준으로 일치하는 데이터 1개 조회
