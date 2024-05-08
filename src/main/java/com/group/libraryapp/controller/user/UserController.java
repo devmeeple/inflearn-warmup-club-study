@@ -13,35 +13,35 @@ import org.springframework.web.bind.annotation.RestController;
 import com.group.libraryapp.dto.user.request.UserCreateRequest;
 import com.group.libraryapp.dto.user.request.UserUpdateRequest;
 import com.group.libraryapp.dto.user.response.UserResponse;
-import com.group.libraryapp.service.user.UserServiceV1;
+import com.group.libraryapp.service.user.UserServiceV2;
 
 @RestController
 public class UserController {
 
 	// TODO: 2024.04.30 13. 데이터베이스 사용
-	private final UserServiceV1 userServiceV1;
+	private final UserServiceV2 userService;
 
-	public UserController(UserServiceV1 userServiceV1) {
-		this.userServiceV1 = userServiceV1;
+	public UserController(UserServiceV2 userService) {
+		this.userService = userService;
 	}
 
 	@PostMapping("/user")
 	public void saveUser(@RequestBody UserCreateRequest request) {
-		userServiceV1.saveUser(request);
+		userService.saveUser(request);
 	}
 
 	@GetMapping("/user")
 	public List<UserResponse> getUsers() {
-		return userServiceV1.getUsers();
+		return userService.getUsers();
 	}
 
 	@PutMapping("/user")
 	public void updateUser(@RequestBody UserUpdateRequest request) {
-		userServiceV1.updateUser(request);
+		userService.updateUser(request);
 	}
 
 	@DeleteMapping("/user")
 	public void deleteUser(@RequestParam String name) {
-		userServiceV1.deleteUser(name);
+		userService.deleteUser(name);
 	}
 }

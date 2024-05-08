@@ -85,3 +85,8 @@ SQL을 직접 사용했을 때의 문제점과 JPA는 무엇인가
 - save: 객체를 저장하거나 업데이트
 - findAll: 일치하는 모든 데이터 조회
 - findById: id를 기준으로 일치하는 데이터 1개 조회
+
+## 26. Spring Data JPA를 이용해 다양한 쿼리 작성하기
+
+- Spring Data JPA를 사용하면 다양한 쿼리를 조합할 수 있음
+- find, findAll, count, 등등...
