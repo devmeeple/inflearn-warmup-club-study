@@ -90,3 +90,8 @@ SQL을 직접 사용했을 때의 문제점과 JPA는 무엇인가
 
 - Spring Data JPA를 사용하면 다양한 쿼리를 조합할 수 있음
 - find, findAll, count, 등등...
+
+## 27. 트랜잭션 이론 편
+
+- 트랜잭션이(Transaction)이란 더 이상 쪼갤 수 없는 업무의 최소단위를 의미함
+- 트랜잭션을 시작하면 모두 성공(commit)하거나 되돌리기(rollback)할 수 있음
