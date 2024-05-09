@@ -120,3 +120,21 @@ API 스펙을 설계하고 직접 구현하는 것을 권장
 ```
 
 - 결과 반환 X(200 상태코드)
+
+## 31. 대출 기능 개발하기
+
+- 책을 빌릴 수 있다.
+- 이미 대출중인 책은 빌릴 수 없다.
+
+- HTTP Method: POST
+- HTTP Path: /book/loan
+- HTTP Body: (JSON)
+
+```json
+{
+  "userName": "String",
+  "BookName": "String"
+}
+```
+
+- 결과 반환 X(200 상태코드)
