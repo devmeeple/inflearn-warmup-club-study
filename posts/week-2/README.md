@@ -138,3 +138,20 @@ API 스펙을 설계하고 직접 구현하는 것을 권장
 ```
 
 - 결과 반환 X(200 상태코드)
+
+## 32. 반납 기능 개발하기
+
+사용자가 책을 반납할 수 있다
+
+- HTTP Method: PUT
+- HTTP Path: /book/return
+- HTTP Body: (JSON)
+
+```json
+{
+  "userName": "String",
+  "bookName": "String"
+}
+```
+
+- 결과 반환 X(200 상태코드)
