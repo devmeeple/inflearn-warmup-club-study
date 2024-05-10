@@ -1,10 +1,16 @@
 package com.group.libraryapp.domain.user;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
+import com.group.libraryapp.domain.user.loanhistory.UserLoanHistory;
 
 @Entity
 public class User {
@@ -17,6 +23,9 @@ public class User {
 	private String name;
 
 	private Integer age;
+
+	@OneToMany(mappedBy = "user")
+	private List<UserLoanHistory> userLoanHistories = new ArrayList<>();
 
 	protected User() {
 	}
