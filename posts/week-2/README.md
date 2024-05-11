@@ -167,3 +167,8 @@ API 스펙을 설계하고 직접 구현하는 것을 권장
 @OneToMany(mappedBy = "user")
 private List<UserLoanHistory> userLoanHistories = new ArrayList<>(); 
 ```
+
+## 34. JPA 연관관계에 대한 추가적인 기능들
+
+- 상대 테이블을 지목하는 테이블이 연관관계의 주인, 주인이 아닌 객체는 `mappedBy`를 통해 귀속됨을 표시해야 함
+- cascade: 폭포처럼 흐르다 -> 객체가 저장되거나 삭제될 때 함께 저장되거나 삭제

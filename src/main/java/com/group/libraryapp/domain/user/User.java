@@ -3,6 +3,7 @@ package com.group.libraryapp.domain.user;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -24,7 +25,8 @@ public class User {
 
 	private Integer age;
 
-	@OneToMany(mappedBy = "user")
+	// TODO: 2024.05.11 유저가 사라질 때 대출기록도 함께삭제
+	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<UserLoanHistory> userLoanHistories = new ArrayList<>();
 
 	protected User() {
