@@ -172,3 +172,9 @@ private List<UserLoanHistory> userLoanHistories = new ArrayList<>();
 
 - 상대 테이블을 지목하는 테이블이 연관관계의 주인, 주인이 아닌 객체는 `mappedBy`를 통해 귀속됨을 표시해야 함
 - cascade: 폭포처럼 흐르다 -> 객체가 저장되거나 삭제될 때 함께 저장되거나 삭제
+
+## 35. 책 대출/반납 기능 리팩터링과 지연 로딩
+
+> ![비즈니스 로직구현 Entity VS Service](https://www.inflearn.com/questions/117315/%EB%B9%84%EC%A7%80%EB%8B%88%EC%8A%A4-%EB%A1%9C%EC%A7%81%EA%B5%AC%ED%98%84-entity-vs-service)
+
+- 서비스에 작성된 비즈니스 로직을 도메인 계층으로 이동시킴

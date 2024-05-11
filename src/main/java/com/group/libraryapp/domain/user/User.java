@@ -52,7 +52,21 @@ public class User {
 		return age;
 	}
 
+	// TODO: 2024.05.11 도메인 계층에 작성된 비즈니스 로직
 	public void updateName(String name) {
 		this.name = name;
+	}
+
+	public void loanBook(String bookName) {
+		this.userLoanHistories.add(new UserLoanHistory(this, bookName));
+	}
+
+	public void returnBook(String bookName) {
+		UserLoanHistory targetHistory = this.userLoanHistories.stream()
+			.filter(history -> history.getBookName().equals(bookName))
+			.findFirst()
+			.orElseThrow(IllegalArgumentException::new);
+
+		targetHistory.doReturn();
 	}
 }
