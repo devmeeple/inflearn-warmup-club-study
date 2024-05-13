@@ -16,7 +16,7 @@ import org.springframework.test.web.servlet.ResultActions;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.group.libraryapp.dto.fruit.request.AddFruitIRequest;
+import com.group.libraryapp.dto.fruit.request.AddFruitRequest;
 import com.group.libraryapp.dto.fruit.request.UpdateFruitRequest;
 
 // TODO: 2024.05.03 값은 계속 증가한다. 어떻게 같은 결과를 얻을 수 있을까? Transactional 외에 다른 방법은 없을까?
@@ -35,7 +35,7 @@ public class FruitControllerTest {
 	@Test
 	void addFruit() throws Exception {
 		// given
-		AddFruitIRequest request = new AddFruitIRequest("사과", LocalDate.of(2024, 2, 1), 5000);
+		AddFruitRequest request = new AddFruitRequest("사과", LocalDate.of(2024, 2, 1), 5000);
 
 		// when
 		ResultActions res = mockMvc.perform(post("/api/v1/fruit")

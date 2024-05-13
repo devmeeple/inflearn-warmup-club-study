@@ -2,12 +2,12 @@ package com.group.libraryapp.dto.fruit.request;
 
 import java.time.LocalDate;
 
-public class AddFruitIRequest {
+public class AddFruitRequest {
 	private final String name;
 	private final LocalDate warehousingDate;
 	private final long price;
 
-	public AddFruitIRequest(String name, LocalDate warehousingDate, long price) {
+	public AddFruitRequest(String name, LocalDate warehousingDate, long price) {
 		this.name = name;
 		this.warehousingDate = warehousingDate;
 		this.price = price;
