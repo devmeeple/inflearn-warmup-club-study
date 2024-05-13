@@ -28,3 +28,11 @@
 
 - Git: 버전관리 프로그램
 - GitHub: Git으로 작성된 프로그램을 올리는 원격 저장소
+
+## 40. git 기초 사용법
+
+- git init: git 프로젝트 설정
+- git remote add origin [저장소 주소]: 원격 저장소 추가
+- git add [파일]: stage 파일 올리기
+- git status: 상태조회
+- git push --set-upstream origin [branch]: push 원격 저장소 설정(최초 1회)
