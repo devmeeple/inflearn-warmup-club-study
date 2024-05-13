@@ -36,3 +36,12 @@
 - git add [파일]: stage 파일 올리기
 - git status: 상태조회
 - git push --set-upstream origin [branch]: push 원격 저장소 설정(최초 1회)
+
+## 41. AWS의 EC2 사용하기
+
+[AWS](https://aws.amazon.com/ko/free/?gclid=CjwKCAjw9IayBhBJEiwAVuc3fqgIeWpeiKJb-8LYPDAozmpNyV92vuBWLxCBvNjY3MZwiq2cfocLHBoCrx4QAvD_BwE&trk=2e777eb1-7c1a-4acc-ae47-724e1cd50096&sc_channel=ps&ef_id=CjwKCAjw9IayBhBJEiwAVuc3fqgIeWpeiKJb-8LYPDAozmpNyV92vuBWLxCBvNjY3MZwiq2cfocLHBoCrx4QAvD_BwE:G:s&s_kwcid=AL!4422!3!444218215904!e!!g!!aws!10287751092!99328587341&all-free-tier.sort-by=item.additionalFields.SortRank&all-free-tier.sort-order=asc&awsf.Free%20Tier%20Types=*all&awsf.Free%20Tier%20Categories=*all)
+
+- 회원가입 -> 로그인 -> Region/Seoul -> EC2 -> 인스턴스(빌리는 컴퓨터) 생성
+- 이름, OS(Amazon Linux) -> 키 페어 생성 -> 보안 그룹 생성 -> 인스턴스 시작
+- 인스턴스 유형
+    - [컴퓨터의 성격, 세대].[성능]: t2.micro
