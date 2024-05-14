@@ -70,3 +70,13 @@
 - 리눅스 패키지 매니저 설치하기
 - 프로그램 설치(Git, Java, MySQL)
 - 프로그램 설치확인 방법
+
+## 45. 빌드와 실행, 그리고 접속
+
+- 코드 가져오기
+- Swap 설정
+    - [AWS re:Post](https://repost.aws/ko/knowledge-center/ec2-memory-swap-file)
+- 빌드와 실행, profile
+- 접속하기
+- 실행 중인 프로그램 중단하기
+- 무중단 배포 방법
