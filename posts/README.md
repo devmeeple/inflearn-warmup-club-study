@@ -92,3 +92,9 @@
     - 파일 직접편집
     - 파일 출력
     - 파일 끝부분 출력
+
+# 8. Spring Boot의 이모저모
+
+## 49. build.gradle 이해하기
+
+- [build.grade](https://docs.spring.io/spring-boot/docs/current/gradle-plugin/reference/htmlsingle/)
