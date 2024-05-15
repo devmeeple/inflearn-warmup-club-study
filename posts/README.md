@@ -108,3 +108,8 @@
 
 - YAML, 문법
 - [lombok](https://projectlombok.org/setup/gradle)
+
+## 52. Spring Boot 2.7.x에서 3.0.x로 업데이트 하기
+
+- [Spring Boot 3.0 Release Notes](https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-3.0-Release-Notes)
+- [Spring Boot 3.0 Migration](https://jojoldu.tistory.com/698)
