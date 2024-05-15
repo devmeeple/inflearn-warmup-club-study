@@ -98,3 +98,8 @@
 ## 49. build.gradle 이해하기
 
 - [build.grade](https://docs.spring.io/spring-boot/docs/current/gradle-plugin/reference/htmlsingle/)
+
+## 50. Spring과 Spring Boot
+
+- Spring -> Spring Boot
+- [MSA에 적합한 모니터링](https://toss.tech/article/how-to-work-health-check-in-spring-boot-actuator)
