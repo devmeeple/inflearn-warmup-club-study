@@ -103,3 +103,8 @@
 
 - Spring -> Spring Boot
 - [MSA에 적합한 모니터링](https://toss.tech/article/how-to-work-health-check-in-spring-boot-actuator)
+
+## 51. application.yml과 application.properties, lombok
+
+- YAML, 문법
+- [lombok](https://projectlombok.org/setup/gradle)
